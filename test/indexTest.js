@@ -1,6 +1,6 @@
 const expect = chai.expect;
 
-describe('drivers', function() {
+describe('Driver', function() {
   describe('creating a new driver', function() {
     describe('store', function() {
       it('can store drivers', function() {
@@ -34,7 +34,7 @@ describe('drivers', function() {
   })
 })
 
-describe('passengers', function() {
+describe('Passenger', function() {
   describe('creating a new passenger', function() {
     describe('store', function() {
       it('can store passengers', function() {
@@ -68,7 +68,7 @@ describe('passengers', function() {
   })
 })
 
-describe('trips', function() {
+describe('Trip', function() {
     let driver
     let passenger
     let secondPassenger
@@ -134,7 +134,7 @@ describe('relating a driver to a trip and a passenger', function() {
     store.trips = []
   })
 
-  describe('trip', function(){
+  describe('Trip', function(){
     it('has a driverId', function(){
       expect(firstTrip.driverId).to.equal(driver.id)
     })
@@ -152,7 +152,7 @@ describe('relating a driver to a trip and a passenger', function() {
     })
   })
 
-  describe('driver', function(){
+  describe('Driver', function(){
     it('has a trips', function() {
       expect(driver.trips()).to.include(firstTrip)
       expect(driver.trips()).to.include(secondTrip)
@@ -164,7 +164,7 @@ describe('relating a driver to a trip and a passenger', function() {
     })
   })
 
-  describe('passengers', function(){
+  describe('Passenger', function(){
     it('has a trips', function() {
       expect(passenger.trips()).to.include(firstTrip)
     })
@@ -174,4 +174,3 @@ describe('relating a driver to a trip and a passenger', function() {
     })
   })
 })
-
